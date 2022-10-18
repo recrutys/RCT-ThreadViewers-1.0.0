@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="admin" title="widget_def_options_rct_thread_viewers" version_id="1000070" version_string="1.0.0"><![CDATA[]]></template>
+  <template type="admin" title="widget_def_options_rct_thread_viewers_all" version_id="1000070" version_string="1.0.0"><![CDATA[]]></template>
+  <template type="public" title="rct_thread_viewers_list" version_id="1000070" version_string="1.0.0"><![CDATA[<xf:title>{{ phrase('rct_list_of_users_who_viewed_the_thread') }}</xf:title>
+<div class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<div class="block-row">
+				<ul class="listInline listInline--comma">
+					<xf:foreach loop="$views" value="$view">
+						<li><xf:username title="{{ date($view.thread_read_date) }}" notooltip="true" user="$view.User" rich="true" /></li>
+					</xf:foreach>
+				</ul>
+			</div>
+			<div class="block-footer">
+				{{ phrase('rct_thread_viewers_count_list', { 'count': count($views) }) }}
+			</div>
+		</div>
+	</div>
+</div>]]></template>
+  <template type="public" title="rct_widget_thread_current_viewers" version_id="1000070" version_string="1.0.0"><![CDATA[<div class="block"{{ widget_data($widget) }}>
+	<div class="block-container">
+		<h3 class="block-minorHeader">{$title}</h3>
+		<div class="block-body block-row">
+			<ul class="listInline listInline--comma">
+				<xf:foreach loop="$users" value="$user">
+					<li><xf:username user="$user" rich="true" /></li>
+				</xf:foreach>
+			</ul>
+		</div>
+		<div class="block-footer">
+			{{ phrase('rct_thread_viewers_count', { 'count': count($users) }) }}
+		</div>
+	</div>
+</div>]]></template>
+  <template type="public" title="rct_widget_thread_viewers" version_id="1000070" version_string="1.0.0"><![CDATA[<div class="block"{{ widget_data($widget) }}>
+	<div class="block-container">
+		<h3 class="block-minorHeader">{$title}</h3>
+		<div class="block-body block-row">
+			<ul class="listInline listInline--comma">
+				<xf:foreach loop="$views" value="$view">
+					<li><xf:username title="{{ date($view.thread_read_date) }}" notooltip="true" user="$view.User" rich="true" /></li>
+				</xf:foreach>
+			</ul>
+		</div>
+		<div class="block-footer">
+			<xf:button data-xf-click="overlay" href="{{ link('threads/rct-viewers', $context.thread) }}">{{ phrase("rct_show_all_users") }}</xf:button>
+		</div>	
+	</div>
+</div>]]></template>
+</templates>

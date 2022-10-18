@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="rct_list_of_users_who_viewed_the_thread" version_id="1000070" version_string="1.0.0"><![CDATA[List of users, who viewed the thread]]></phrase>
+  <phrase title="rct_show_all_users" version_id="1000070" version_string="1.0.0"><![CDATA[Show all users]]></phrase>
+  <phrase title="rct_thread_viewers_count" version_id="1000070" version_string="1.0.0"><![CDATA[Number of users viewing the thread:  {count}]]></phrase>
+  <phrase title="rct_thread_viewers_count_list" version_id="1000070" version_string="1.0.0"><![CDATA[The total number of people who viewed the thread:  {count}]]></phrase>
+  <phrase title="widget_def.rct_thread_viewers" version_id="1000070" version_string="1.0.0"><![CDATA[Thread viewers]]></phrase>
+  <phrase title="widget_def.rct_thread_viewers_all" version_id="1000070" version_string="1.0.0"><![CDATA[All viewers]]></phrase>
+  <phrase title="widget_def_desc.rct_thread_viewers" version_id="1000070" version_string="1.0.0"><![CDATA[]]></phrase>
+  <phrase title="widget_def_desc.rct_thread_viewers_all" version_id="1000070" version_string="1.0.0"><![CDATA[]]></phrase>
+</phrases>
